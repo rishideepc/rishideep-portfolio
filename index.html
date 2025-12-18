@@ -12,7 +12,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishideep Chatterjee</title>
+    <title>Rishideep Chatterjee - Interactive Portfolio</title>
     <meta name="author" content="Rishideep Chatterjee">
     <meta name="description" content="Rishideep Chatterjee - MSc Advanced Computing @ Imperial College London. Research in ML, NLP, and Computer Vision.">
 
@@ -21,22 +21,60 @@
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-brand">Rishideep Chatterjee</a>
+            <a href="#home" class="nav-brand">
+                <span class="brand-bracket">{</span>
+                <span class="brand-name">RC</span>
+                <span class="brand-bracket">}</span>
+            </a>
+
+            <!-- Dark Mode Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#leadership" class="nav-link">Leadership</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-number">01.</span> About</a></li>
+                <li><a href="#research" class="nav-link"><span class="nav-number">02.</span> Research</a></li>
+                <li><a href="#education" class="nav-link"><span class="nav-number">03.</span> Education</a></li>
+                <li><a href="#leadership" class="nav-link"><span class="nav-number">04.</span> Leadership</a></li>
+                <li><a href="#publications" class="nav-link"><span class="nav-number">05.</span> Publications</a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-number">06.</span> Projects</a></li>
             </ul>
         </div>
     </nav>
@@ -46,30 +84,51 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Rishideep Chatterjee</h1>
-                    <div class="typewriter">
-                        <p class="hero-subtitle">MSc in Advanced Computing @ Imperial College London</p>
+                    <p class="hero-greeting" data-scroll-reveal>Hi, my name is</p>
+                    <h1 class="hero-title" data-scroll-reveal>
+                        <span class="glitch" data-text="Rishideep Chatterjee">Rishideep Chatterjee</span>
+                    </h1>
+                    <div class="typing-container" data-scroll-reveal>
+                        <h2 class="hero-subtitle">
+                            <span class="typing-text">MSc in Advanced Computing @ Imperial College London</span>
+                            <span class="typing-cursor">|</span>
+                        </h2>
                     </div>
-                    <p class="hero-description">ML Research • NLP • Computer Vision</p>
-                    <div class="hero-links">
-                        <a href="mailto:rishi1a2@gmail.com" class="btn-link" target="_blank">
+                    <p class="hero-description" data-scroll-reveal>
+                        ML Research <span class="highlight-dot">•</span>
+                        NLP <span class="highlight-dot">•</span>
+                        Computer Vision
+                    </p>
+
+                    <div class="hero-cta" data-scroll-reveal>
+                        <a href="#about" class="btn-primary">
+                            <span>Explore My Work</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="mailto:rishi1a2@gmail.com" class="btn-secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+
+                    <div class="social-links" data-scroll-reveal>
+                        <a href="mailto:rishi1a2@gmail.com" class="social-link" target="_blank" data-tooltip="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
-                            Email
                         </a>
-                        <a href="https://github.com/rishideepc" class="btn-link" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://github.com/rishideepc" class="social-link" target="_blank" data-tooltip="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
-                            GitHub
                         </a>
-                        <a href="https://www.linkedin.com/in/rishideepchatterjee/" class="btn-link" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://www.linkedin.com/in/rishideepchatterjee/" class="social-link" target="_blank" data-tooltip="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                             </svg>
-                            LinkedIn
                         </a>
                     </div>
                 </div>
@@ -78,112 +137,186 @@
                 </div>
             </div>
         </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-item" style="top: 20%; left: 10%;">ML</div>
+            <div class="float-item" style="top: 60%; left: 15%;">AI</div>
+            <div class="float-item" style="top: 30%; right: 20%;">CV</div>
+            <div class="float-item" style="top: 70%; right: 10%;">NLP</div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">01.</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+
             <div class="about-content">
-                <p>
-                    Hello! I'm Rishideep, a postgraduate student in Advanced Computing at <strong><a href="https://www.imperial.ac.uk/" target="_blank">Imperial College London</a></strong>.
-                    I recently graduated from <a href="https://rcciit.org/" target="_blank">RCC Institute of Information Technology</a> with a Bachelor of Technology (B.Tech) in Computer Science & Engineering.
-                </p>
-                <p>
-                    My fascination with software systems was sparked during my early adolescent years, when I attempted to build an application that
-                    could switch users across multiple devices. Little did I know that this digital venture would become my gateway to comprehending the intricate dance of computers.
-                </p>
-                <p>
-                    I've had the privilege of conducting research at <a href="https://jadavpuruniversity.in/" target="_blank">Jadavpur University</a> under the <a href="https://www.isro.gov.in/" target="_blank">Indian Space Research Organization (ISRO)</a>,
-                    and at <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>, where I worked on <a href="https://www.cmu.edu/scs/robotutor/" target="_blank">RoboTutor</a>,
-                    winner of the $15M Global Learning XPRIZE competition.
-                </p>
-                <p>
-                    I also served as a <a href="data/GDSC_Lead_Certificate.pdf" target="_blank">Google Developer Student Club (GDSC) Lead</a>, mentoring a community of over 1200 developers.
-                </p>
-                <div class="tech-stack">
+                <div class="about-text" data-scroll-reveal>
+                    <p>
+                        Hello! I'm Rishideep, a postgraduate student in Advanced Computing at <strong><a href="https://www.imperial.ac.uk/" target="_blank">Imperial College London</a></strong>.
+                        I recently graduated from <a href="https://rcciit.org/" target="_blank">RCC Institute of Information Technology</a> with a Bachelor of Technology (B.Tech) in Computer Science & Engineering.
+                    </p>
+                    <p>
+                        My fascination with software systems was sparked during my early adolescent years, when I attempted to build an application that
+                        could switch users across multiple devices. Little did I know that this digital venture would become my gateway to comprehending the intricate dance of computers.
+                    </p>
+                    <p>
+                        I've had the privilege of conducting research at <a href="https://jadavpuruniversity.in/" target="_blank">Jadavpur University</a> under the <a href="https://www.isro.gov.in/" target="_blank">Indian Space Research Organization (ISRO)</a>,
+                        and at <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>, where I worked on <a href="https://www.cmu.edu/scs/robotutor/" target="_blank">RoboTutor</a>,
+                        winner of the $15M Global Learning XPRIZE competition.
+                    </p>
+                    <p>
+                        I also served as a <a href="data/GDSC_Lead_Certificate.pdf" target="_blank">Google Developer Student Club (GDSC) Lead</a>, mentoring a community of over 1200 developers.
+                    </p>
+
+                    <p class="fun-fact" data-scroll-reveal>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                        <strong>Fun Fact:</strong> I work with NCrack in my free time!
+                    </p>
+                </div>
+
+                <div class="tech-showcase" data-scroll-reveal>
                     <h3>Technologies I work with:</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">BERT</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">TensorFlow</span>
+                    <div class="tech-grid">
+                        <div class="tech-item" data-tech="Python">
+                            <div class="tech-icon">🐍</div>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item" data-tech="Java">
+                            <div class="tech-icon">☕</div>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-item" data-tech="SQL">
+                            <div class="tech-icon">🗄️</div>
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-item" data-tech="FastAPI">
+                            <div class="tech-icon">⚡</div>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="tech-item" data-tech="Flask">
+                            <div class="tech-icon">🌶️</div>
+                            <span>Flask</span>
+                        </div>
+                        <div class="tech-item" data-tech="Scikit-learn">
+                            <div class="tech-icon">🔬</div>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="tech-item" data-tech="BERT">
+                            <div class="tech-icon">🤖</div>
+                            <span>BERT</span>
+                        </div>
+                        <div class="tech-item" data-tech="PyTorch">
+                            <div class="tech-icon">🔥</div>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="tech-item" data-tech="TensorFlow">
+                            <div class="tech-icon">📊</div>
+                            <span>TensorFlow</span>
+                        </div>
                     </div>
                 </div>
-                <p class="fun-fact">
-                    <strong>Fun Fact:</strong> I work with NCrack in my free time!
-                </p>
             </div>
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <section id="timeline" class="section section-alt">
+    <section id="timeline" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Sept '24</div>
-                    <div class="timeline-content">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">•</span>
+                <h2 class="section-title">Journey Timeline</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline-interactive">
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Sept '24</span>
                         <p>Started pursuing postgraduate degree at Imperial College London - MSc Advanced Computing</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">July '24</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">July '24</span>
                         <p>Graduated with a B.Tech (Hons.) in Computer Science & Engineering</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">June '24</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">June '24</span>
                         <p>Presented paper on <em>Noise-Resistant LBP Descriptors</em>, as part of my undergraduate research project</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">May '24</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">May '24</span>
                         <p>Successfully completed Research Internship at Carnegie Mellon University</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug '23</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Aug '23</span>
                         <p>Presented paper at IEEE ASIANCON 2023 and completed Research Internship at Jadavpur University</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">July '23</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">July '23</span>
                         <p>Paper accepted to IEEE 2023 3rd Asian Conference on Innovation in Technology (ASIANCON), Pune, India</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">June '23</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">June '23</span>
                         <p>Successfully graduated as <a href="data/GDSC_Lead_Certificate.pdf" target="_blank">Google Developer Student Club Lead 2022-23</a> with <a href="images/tier_1.jpg" target="_blank">"Tier 1"</a> institutional rank</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb '23</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Feb '23</span>
                         <p>Started working with Prof. Dr. Jack Mostow at Carnegie Mellon University as Research Intern - RoboTutor team</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">July '22</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">July '22</span>
                         <p>Selected as Google Developer Student Club (GDSC) Lead after a 3-month long rigorous selection process at Google</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">July '22</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">July '22</span>
                         <p>Started working with Prof. Dr. Sarbani Roy at Jadavpur University (Kolkata, India) as Research Intern</p>
                     </div>
                 </div>
@@ -194,18 +327,39 @@
     <!-- Research Experience -->
     <section id="research" class="section">
         <div class="container">
-            <h2 class="section-title">Research Experience & Assistantship</h2>
-            <div class="experience-grid">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">02.</span>
+                <h2 class="section-title">Research Experience</h2>
+                <div class="section-line"></div>
+            </div>
 
+            <div class="experience-container">
                 <!-- CMU -->
-                <div class="experience-card">
+                <div class="experience-card-interactive" data-scroll-reveal>
+                    <div class="card-glow"></div>
                     <div class="experience-header">
-                        <img src="images/CMU.jpeg" alt="Carnegie Mellon University" class="institution-logo">
+                        <div class="institution-badge">
+                            <img src="images/CMU.jpeg" alt="Carnegie Mellon University">
+                        </div>
                         <div class="experience-info">
                             <h3>Research Intern, RoboTutor team</h3>
                             <p class="institution">Carnegie Mellon University</p>
-                            <p class="duration">February '23 - May '24</p>
-                            <p class="location">Pittsburgh, US</p>
+                            <div class="meta-info">
+                                <span class="duration">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    February '23 - May '24
+                                </span>
+                                <span class="location">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    Pittsburgh, US
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-details">
@@ -220,14 +374,31 @@
                 </div>
 
                 <!-- Jadavpur University -->
-                <div class="experience-card">
+                <div class="experience-card-interactive" data-scroll-reveal>
+                    <div class="card-glow"></div>
                     <div class="experience-header">
-                        <img src="images/JU.png" alt="Jadavpur University" class="institution-logo">
+                        <div class="institution-badge">
+                            <img src="images/JU.png" alt="Jadavpur University">
+                        </div>
                         <div class="experience-info">
                             <h3>Research Intern</h3>
                             <p class="institution">Jadavpur University</p>
-                            <p class="duration">July '22 - August '23</p>
-                            <p class="location">Kolkata, India</p>
+                            <div class="meta-info">
+                                <span class="duration">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    July '22 - August '23
+                                </span>
+                                <span class="location">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    Kolkata, India
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-details">
@@ -243,14 +414,31 @@
                 </div>
 
                 <!-- Teaching Assistant -->
-                <div class="experience-card">
+                <div class="experience-card-interactive" data-scroll-reveal>
+                    <div class="card-glow"></div>
                     <div class="experience-header">
-                        <img src="images/RCC.png" alt="RCC Institute" class="institution-logo">
+                        <div class="institution-badge">
+                            <img src="images/RCC.png" alt="RCC Institute">
+                        </div>
                         <div class="experience-info">
                             <h3>Teaching Assistant</h3>
                             <p class="institution">RCC Institute of Information Technology</p>
-                            <p class="duration">July '22 - December '22</p>
-                            <p class="location">Kolkata, India</p>
+                            <div class="meta-info">
+                                <span class="duration">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    July '22 - December '22
+                                </span>
+                                <span class="location">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    Kolkata, India
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-details">
@@ -260,29 +448,37 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Education -->
-    <section id="education" class="section section-alt">
+    <section id="education" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="experience-grid">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
 
+            <div class="education-grid">
                 <!-- Imperial College London -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <img src="images/Imperial.png" alt="Imperial College London" class="institution-logo">
-                        <div class="experience-info">
+                <div class="education-card-interactive" data-scroll-reveal>
+                    <div class="card-shine"></div>
+                    <div class="education-header">
+                        <div class="institution-badge-large">
+                            <img src="images/Imperial.png" alt="Imperial College London">
+                        </div>
+                        <div class="education-info">
                             <h3>MSc Advanced Computing</h3>
                             <p class="institution">Imperial College London</p>
-                            <p class="duration">September '24 - September '25</p>
-                            <p class="location">London, UK</p>
+                            <div class="meta-info">
+                                <span class="duration">September '24 - September '25</span>
+                                <span class="location">London, UK</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="experience-details">
+                    <div class="education-details">
                         <ul>
                             <li><strong>Autumn Term</strong>: Introduction to Machine Learning, Reinforcement Learning, Mathematics for Machine Learning, Computer Vision</li>
                             <li><strong>Spring Term</strong>: Deep Learning, Machine Learning for Imaging, Natural Language Processing, Software Engineering for Machine Learning Systems, Deep Graph-Based Learning</li>
@@ -291,17 +487,22 @@
                 </div>
 
                 <!-- RCCIIT -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <img src="images/RCC.png" alt="RCC Institute" class="institution-logo">
-                        <div class="experience-info">
+                <div class="education-card-interactive" data-scroll-reveal>
+                    <div class="card-shine"></div>
+                    <div class="education-header">
+                        <div class="institution-badge-large">
+                            <img src="images/RCC.png" alt="RCC Institute">
+                        </div>
+                        <div class="education-info">
                             <h3>B.Tech (Hons.) Computer Science & Engineering</h3>
                             <p class="institution">RCCIIT</p>
-                            <p class="duration">November '20 - June '24</p>
-                            <p class="location">Kolkata, India</p>
+                            <div class="meta-info">
+                                <span class="duration">November '20 - June '24</span>
+                                <span class="location">Kolkata, India</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="experience-details">
+                    <div class="education-details">
                         <ul>
                             <li><strong>Coursework in Core Computer Science</strong>: Data Structures & Algorithms, Discrete Mathematics, Object-Oriented Programming, Operating Systems, Software Engineering, Database Management Systems, Computer Architecture, Compiler Design, Artificial Intelligence, and Pattern Recognition</li>
                             <li><strong>Additional Coursework</strong>: Industrial Management and Engineering Economics</li>
@@ -310,7 +511,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -318,45 +518,62 @@
     <!-- Leadership -->
     <section id="leadership" class="section">
         <div class="container">
-            <h2 class="section-title">Leadership & Community Engagement</h2>
-            <div class="experience-grid">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">04.</span>
+                <h2 class="section-title">Leadership</h2>
+                <div class="section-line"></div>
+            </div>
 
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <img src="images/Google_Icon.webp" alt="Google" class="institution-logo">
-                        <div class="experience-info">
-                            <h3>Google Developer Student Club (GDSC) Lead</h3>
-                            <p class="institution">Google LLC</p>
-                            <p class="duration">July '22 - June '23</p>
+            <div class="leadership-showcase" data-scroll-reveal>
+                <div class="leadership-card">
+                    <div class="card-glow"></div>
+                    <div class="leadership-icon">
+                        <img src="images/Google_Icon.webp" alt="Google">
+                    </div>
+                    <h3>Google Developer Student Club (GDSC) Lead</h3>
+                    <p class="institution">Google LLC</p>
+                    <p class="duration">July '22 - June '23</p>
+
+                    <div class="achievements">
+                        <div class="achievement-stat">
+                            <span class="stat-number" data-count="10">0</span>
+                            <span class="stat-label">Events Hosted</span>
+                        </div>
+                        <div class="achievement-stat">
+                            <span class="stat-number" data-count="1200">0</span>
+                            <span class="stat-label">Developers Mentored</span>
                         </div>
                     </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Hosted <strong>10+</strong> speaker sessions, seminars, study jams, and hackathons, and in the process, inculcated a culture of development in the community and beyond</li>
-                            <li>Mentored a community of <strong>1200+ developers</strong>, organized biweekly events and activities, and supervised multiple community projects</li>
-                            <li>Partnered with various technology communities for conducting workshops and drives across the GDSC map of our country</li>
-                            <li>Collaborated with <a href="https://gdg.community.dev/gdg-kolkata/" target="_blank">Google Developers Group (GDG) Kolkata</a> and
-                            <a href="https://developers.google.com/womentechmakers" target="_blank">Women Techmakers (WTM)</a> Kolkata, to organize their flagship
-                            <strong>International Women's Day (IWD)</strong> event at our campus</li>
-                            <li>Trailblazed RCC-IIT's Google Developer Student Club from <strong>Tier 2 to Tier 1</strong> status - earned a special mention in
-                            Principal's annual address & felicitation at the <strong>GDSC India Graduation Ceremony</strong> in Bangalore, India</li>
-                        </ul>
-                    </div>
-                </div>
 
+                    <ul>
+                        <li>Hosted <strong>10+</strong> speaker sessions, seminars, study jams, and hackathons, and in the process, inculcated a culture of development in the community and beyond</li>
+                        <li>Mentored a community of <strong>1200+ developers</strong>, organized biweekly events and activities, and supervised multiple community projects</li>
+                        <li>Partnered with various technology communities for conducting workshops and drives across the GDSC map of our country</li>
+                        <li>Collaborated with <a href="https://gdg.community.dev/gdg-kolkata/" target="_blank">Google Developers Group (GDG) Kolkata</a> and
+                        <a href="https://developers.google.com/womentechmakers" target="_blank">Women Techmakers (WTM)</a> Kolkata, to organize their flagship
+                        <strong>International Women's Day (IWD)</strong> event at our campus</li>
+                        <li>Trailblazed RCC-IIT's Google Developer Student Club from <strong>Tier 2 to Tier 1</strong> status - earned a special mention in
+                        Principal's annual address & felicitation at the <strong>GDSC India Graduation Ceremony</strong> in Bangalore, India</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Publications -->
-    <section id="publications" class="section section-alt">
+    <section id="publications" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Conference Presentation & Publication</h2>
-            <div class="publication-list">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">05.</span>
+                <h2 class="section-title">Publications</h2>
+                <div class="section-line"></div>
+            </div>
 
-                <div class="publication-card">
-                    <div class="publication-image">
+            <div class="publication-showcase">
+                <div class="publication-card-interactive" data-scroll-reveal>
+                    <div class="publication-image-container">
                         <img src="images/dt_roc.png" alt="Publication">
+                        <div class="image-overlay"></div>
                     </div>
                     <div class="publication-content">
                         <h3><a href="https://ieeexplore.ieee.org/document/10270576" target="_blank">Automated Landslide Event Archive Generation from News Articles</a></h3>
@@ -366,15 +583,20 @@
                             <a href="https://sites.google.com/site/sarbaniroy/" target="_blank">Dr. Sarbani Roy</a>
                         </p>
                         <p class="venue">
-                            <a href="https://asiancon.org/" target="_blank"><em>IEEE ASIANCON</em> 2023</a> •
-                            [<a href="data/Automated_Landslide_Event_Archive_Generation_from_News_Articles.pdf" target="_blank">PDF</a>] •
-                            <a href="data/ASIANCON_Certificate_RishideepChatterjee.pdf" target="_blank"><em>Acknowledgement</em></a>
+                            <span class="venue-badge">IEEE ASIANCON 2023</span>
+                            <a href="data/Automated_Landslide_Event_Archive_Generation_from_News_Articles.pdf" target="_blank" class="doc-link">PDF</a>
+                            <a href="data/ASIANCON_Certificate_RishideepChatterjee.pdf" target="_blank" class="doc-link">Certificate</a>
                         </p>
                         <p class="citation">
-                            <em>S. Bhattacharya, R. Chatterjee and S. Roy, "Automated Landslide Event Archive Generation from News Articles," 2023 3rd Asian Conference on Innovation in Technology (ASIANCON), Ravet IN, India, 2023, pp. 1-8, doi: 10.1109/ASIANCON58793.2023.10270576.</em>
+                            S. Bhattacharya, R. Chatterjee and S. Roy, "Automated Landslide Event Archive Generation from News Articles," 2023 3rd Asian Conference on Innovation in Technology (ASIANCON), Ravet IN, India, 2023, pp. 1-8, doi: 10.1109/ASIANCON58793.2023.10270576.
                         </p>
                         <details class="publication-details">
-                            <summary>Key Highlights</summary>
+                            <summary>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                                Show Key Highlights
+                            </summary>
                             <ul>
                                 <li>Proposed a <strong>novel framework</strong> for generating landslide archive from online news articles</li>
                                 <li><strong>BERT QA</strong> model configured with questions about date, location, and number of people affected</li>
@@ -386,7 +608,6 @@
                         </details>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -394,103 +615,172 @@
     <!-- Projects -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Projects & Unpublished Work</h2>
-            <div class="projects-grid">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">06.</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+            <div class="projects-grid-interactive">
+                <div class="project-card-interactive" data-scroll-reveal>
+                    <div class="project-image-wrapper">
                         <img src="images/TR.jpeg" alt="Noise-resistant LBP">
+                        <div class="project-overlay">
+                            <a href="data/Undergraduate_Research_Thesis-NoiseResistant_LBP_Descriptor_for_Texture_Recognition_A_Supervised_Approach.pdf" target="_blank" class="project-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Noise Resistant Local Binary Pattern Descriptor - A Supervised Approach</h3>
-                        <p class="project-type">Undergraduate Research Thesis • [<a href="data/Undergraduate_Research_Thesis-NoiseResistant_LBP_Descriptor_for_Texture_Recognition_A_Supervised_Approach.pdf" target="_blank">PDF</a>]</p>
-                        <ul>
-                            <li>A powerful tool for texture recognition, <strong>Local Binary Pattern (LBP)</strong> descriptor is often sensitive to image noise, compromising visual quality & recognition accuracy</li>
-                            <li>The project presents a <strong>noise-resistant</strong> LBP descriptor for robust texture recognition through image processing - the approach involves four stages:
-                            <br><strong>(1)</strong> image preprocessing,
-                            <br><strong>(2)</strong> LBP feature extraction,
-                            <br><strong>(3)</strong> noise-resistant thresholding, and
-                            <br><strong>(4)</strong> texture pattern classification using a Machine Learning algorithm</li>
-                            <li>Experimental results on the <strong>Brodatz</strong> texture dataset and the <strong>OASIS Brain MRI</strong> dataset demonstrate superior performance</li>
-                            <li><strong>Tech Stack</strong>: Python CV2, Scikit-learn, Numpy</li>
-                        </ul>
+                        <span class="project-type">Undergraduate Research Thesis</span>
+                        <h3>Noise Resistant Local Binary Pattern Descriptor</h3>
+                        <p>A supervised approach for robust texture recognition through image processing with noise-resistant thresholding.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">CV2</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">ML</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="project-card-interactive" data-scroll-reveal>
+                    <div class="project-image-wrapper">
                         <img src="images/CV.png" alt="Gesture App">
+                        <div class="project-overlay">
+                            <a href="https://github.com/rishideepc/Gesture_App" target="_blank" class="project-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                     <div class="project-content">
+                        <span class="project-type">Cross-platform Mobile App</span>
                         <h3>Gesture-App</h3>
-                        <p class="project-type">Cross-platform Mobile Application • <a href="https://github.com/rishideepc/Gesture_App" target="_blank">Repository</a></p>
-                        <ul>
-                            <li>A truly distinctive and captivating cross-platform mobile application, offering users an unparalleled level of convenience to effortlessly manipulate their devices using nothing more than hand gestures</li>
-                            <li>The app employs principles of <strong>Material Design</strong> to ensure a seamless User Experience and spark a new paradigm of interaction</li>
-                            <li><strong>Tech Stack</strong>: Python Kivy/KivyMD, OpenCV, Mediapipe, Numpy</li>
-                        </ul>
+                        <p>A captivating mobile application offering effortless device control using hand gestures with Material Design principles.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Kivy</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Mediapipe</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="project-card-interactive" data-scroll-reveal>
+                    <div class="project-image-wrapper">
                         <img src="images/mindbuddy.jpeg" alt="Mind Buddy">
+                        <div class="project-overlay">
+                            <span class="project-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                </svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="project-content">
+                        <span class="project-type">Mental Health Support Bot</span>
                         <h3>The Mind Buddy</h3>
-                        <p class="project-type">Mental Health Support Bot</p>
-                        <ul>
-                            <li>An attempt to combat the growing mental health crisis, in form of an emergency support software</li>
-                            <li>Assumes the role of a confidant, engaging with individuals seeking solace but find it challenging to reach out</li>
-                            <li>Employs a <strong>sentiment analysis</strong> algorithm to detect emotional nuances and offers counsel</li>
-                            <li>Equipped to promptly dispatch distress signals in instances demanding urgent intervention</li>
-                            <li><strong>Tech Stack</strong>: Python, React, Telegram</li>
-                        </ul>
+                        <p>Emergency support software employing sentiment analysis to detect emotional nuances and provide counsel to those in need.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Telegram</span>
+                            <span class="tag">NLP</span>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Certifications -->
-    <section id="certifications" class="section section-alt">
+    <section id="certifications" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications-grid">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-number">•</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
 
-                <div class="cert-card">
-                    <img src="images/mastercard-logo.png" alt="Mastercard">
+            <div class="certifications-grid-interactive">
+                <div class="cert-card-interactive" data-scroll-reveal>
+                    <div class="cert-icon">
+                        <img src="images/mastercard-logo.png" alt="Mastercard">
+                    </div>
                     <h4>Cybersecurity Virtual Experience Program</h4>
                     <p class="cert-issuer">Mastercard</p>
-                    <p class="cert-date">Issued May '22</p>
-                    <a href="data/Mastercard_CyberSecurity_CourseCertificate.pdf" target="_blank" class="cert-link">View Certificate</a>
+                    <p class="cert-date">May '22</p>
+                    <a href="data/Mastercard_CyberSecurity_CourseCertificate.pdf" target="_blank" class="cert-btn">
+                        <span>View Certificate</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
 
-                <div class="cert-card">
-                    <img src="images/aws.png" alt="AWS">
+                <div class="cert-card-interactive" data-scroll-reveal>
+                    <div class="cert-icon">
+                        <img src="images/aws.png" alt="AWS">
+                    </div>
                     <h4>Getting Started with AWS Machine Learning</h4>
                     <p class="cert-issuer">Amazon Web Services</p>
-                    <p class="cert-date">Issued August '21</p>
-                    <a href="data/AWS-MachineLearning-Coursera.pdf" target="_blank" class="cert-link">View Certificate</a>
+                    <p class="cert-date">August '21</p>
+                    <a href="data/AWS-MachineLearning-Coursera.pdf" target="_blank" class="cert-btn">
+                        <span>View Certificate</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
 
-                <div class="cert-card">
-                    <img src="images/SkillUp_NASSCOM.png" alt="NASSCOM">
+                <div class="cert-card-interactive" data-scroll-reveal>
+                    <div class="cert-icon">
+                        <img src="images/SkillUp_NASSCOM.png" alt="NASSCOM">
+                    </div>
                     <h4>Foundationals of Artificial Intelligence</h4>
                     <p class="cert-issuer">SkillUp / NASSCOM</p>
-                    <p class="cert-date">Issued June '21</p>
-                    <a href="data/NASCOMM_AI_Certification.pdf" target="_blank" class="cert-link">View Certificate</a>
+                    <p class="cert-date">June '21</p>
+                    <a href="data/NASCOMM_AI_Certification.pdf" target="_blank" class="cert-btn">
+                        <span>View Certificate</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
 
-                <div class="cert-card">
-                    <img src="images/Goldman_Sachs.png" alt="Goldman Sachs">
+                <div class="cert-card-interactive" data-scroll-reveal>
+                    <div class="cert-icon">
+                        <img src="images/Goldman_Sachs.png" alt="Goldman Sachs">
+                    </div>
                     <h4>Engineering Virtual Experience Program</h4>
                     <p class="cert-issuer">Goldman Sachs</p>
-                    <p class="cert-date">Issued March '21</p>
-                    <a href="data/GS_Certificate of Completion.pdf" target="_blank" class="cert-link">View Certificate</a>
+                    <p class="cert-date">March '21</p>
+                    <a href="data/GS_Certificate of Completion.pdf" target="_blank" class="cert-btn">
+                        <span>View Certificate</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -498,8 +788,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>Check out the code for this website <a href="https://github.com/rishideepc/rishideep-portfolio" target="_blank">here</a>.</p>
-            <p>&copy; 2024 Rishideep Chatterjee</p>
+            <div class="footer-content">
+                <p>Designed & Built by <strong>Rishideep Chatterjee</strong></p>
+                <p>Check out the code <a href="https://github.com/rishideepc/rishideep-portfolio" target="_blank">here</a></p>
+                <div class="footer-links">
+                    <a href="mailto:rishi1a2@gmail.com" target="_blank">Email</a>
+                    <a href="https://github.com/rishideepc" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/rishideepchatterjee/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
         </div>
     </footer>
 
